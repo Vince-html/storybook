@@ -16,10 +16,7 @@ export const Template: ComponentStory<typeof SearchBar> = () => {
   const [localSearchVms, setLocalSearchVms] = useState({
     tipoServidor: '',
     hostname: '',
-    uors_number: [],
-    has_sub: true,
-    ip: '',
-    tags: []
+    ip: ''
   });
 
   const handleValueSearch = (event: ChangeEvent<HTMLInputElement>) => {
@@ -79,7 +76,13 @@ export const Template: ComponentStory<typeof SearchBar> = () => {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    window.alert(localSearchVms);
+    window.alert(
+      JSON.stringify(localSearchVms)
+        .replace(/[{}]/g, ' ')
+        .replace(/,/g, '\n')
+        .replace(/:/g, ': ')
+        .replace(/"/g, '')
+    );
   };
 
   return <SearchBar fields={fields} handleSubmit={handleSubmit} />;
