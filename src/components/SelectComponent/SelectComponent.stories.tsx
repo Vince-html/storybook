@@ -5,7 +5,7 @@ import { ChangeEvent, useState } from 'react';
 import { SelectComponent } from '.';
 
 export default {
-  title: 'Example/SelectComponent',
+  title: 'UI Portal/SelectComponent/SelectComponent',
   component: SelectComponent,
   args: {
     name: 'fabricante',

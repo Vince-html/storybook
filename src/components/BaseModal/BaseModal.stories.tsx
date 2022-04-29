@@ -5,11 +5,8 @@ import { useState } from 'react';
 import { BaseModal } from '.';
 
 export default {
-  title: 'Example/BaseModal',
-  component: BaseModal,
-  args: {
-    title: 'title'
-  }
+  title: 'UI Portal/BaseModal/BaseModal',
+  component: BaseModal
 } as ComponentMeta<typeof BaseModal>;
 
 export const Template: ComponentStory<typeof BaseModal> = args => {

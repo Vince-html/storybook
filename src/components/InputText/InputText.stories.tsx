@@ -4,7 +4,7 @@ import { ChangeEvent, useState } from 'react';
 import { InputText } from '.';
 
 export default {
-  title: 'Example/InputText',
+  title: 'UI Portal/InputText/InputText',
   component: InputText,
   args: {
     name: 'title',

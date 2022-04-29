@@ -6,20 +6,49 @@ import { useState } from 'react';
 import { Button } from '.';
 
 export default {
-  title: 'Example/Button',
+  title: 'UI Portal/Button/Button',
   component: Button,
   args: {
     children: 'Title'
   }
 } as ComponentMeta<typeof Button>;
 
-export const ButtonTemplate: ComponentStory<typeof Button> = args => {
+export const ButtonPrimary: ComponentStory<typeof Button> = args => {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        gap: '2rem',
+        flexDirection: 'column'
+        // width: '150px'
+      }}
+    >
+      <Button {...args}>Salvar</Button>
+    </div>
+  );
+};
+
+export const ButtonSecondary: ComponentStory<typeof Button> = args => {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        gap: '2rem',
+        flexDirection: 'column'
+        // width: '150px'
+      }}
+    >
+      <Button {...args} primary={false} iconEnd={<AddCircleOutline />} />
+    </div>
+  );
+};
+
+export const ButtonLoading: ComponentStory<typeof Button> = args => {
   const [loading, setLoading] = useState(false);
 
   setTimeout(() => {
     setLoading(true);
   }, 2000);
-
   return (
     <div
       style={{
@@ -30,9 +59,51 @@ export const ButtonTemplate: ComponentStory<typeof Button> = args => {
       }}
     >
       <Button {...args} loading={loading} loadingStart primary />
-      <Button {...args}>Salvar e Adicionar outro</Button>
+    </div>
+  );
+};
+
+export const ButtonDisabled: ComponentStory<typeof Button> = args => {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        gap: '2rem',
+        flexDirection: 'column'
+        // width: '150px'
+      }}
+    >
+      <Button {...args} disabled loadingStart primary />
+    </div>
+  );
+};
+
+export const ButtonIcons: ComponentStory<typeof Button> = args => {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        gap: '2rem',
+        flexDirection: 'column'
+        // width: '150px'
+      }}
+    >
       <Button {...args} disabled iconStart={<AddCircleOutline />} />
       <Button {...args} primary={false} iconEnd={<AddCircleOutline />} />
+    </div>
+  );
+};
+
+export const ButtonCustomStyle: ComponentStory<typeof Button> = args => {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        gap: '2rem',
+        flexDirection: 'column'
+        // width: '150px'
+      }}
+    >
       <Button
         {...args}
         primary

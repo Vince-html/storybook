@@ -5,11 +5,17 @@ import { ConfirmComponent } from '.';
 import { Button } from '../Button';
 
 export default {
-  title: 'Example/ConfirmComponent',
-  component: ConfirmComponent
+  title: 'UI Portal/ConfirmComponent/ConfirmComponent',
+  component: ConfirmComponent,
+  args: {
+    title: 'Confirmar',
+
+    onConfirm: () => alert('Confirmado'),
+    onCancel: () => alert('Cancelado')
+  }
 } as ComponentMeta<typeof ConfirmComponent>;
 
-export const Template: ComponentStory<typeof ConfirmComponent> = () => {
+export const Template: ComponentStory<typeof ConfirmComponent> = args => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleRemove = () => {
@@ -23,9 +29,10 @@ export const Template: ComponentStory<typeof ConfirmComponent> = () => {
   return (
     <>
       <Button type="button" onClick={() => setIsOpen(true)}>
-        Abrir Confirm
+        Abrir Componente
       </Button>
       <ConfirmComponent
+        {...args}
         title="Tem certeza que deseja remover?"
         handleRemove={handleRemove}
         handleClose={toggleModal}

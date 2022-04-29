@@ -2,11 +2,8 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { HoverTextElement } from '.';
 
 export default {
-  title: 'Example/HoverTextElement',
-  component: HoverTextElement,
-  args: {
-    children: 'Title'
-  }
+  title: 'UI Portal/HoverTextElement/HoverTextElement',
+  component: HoverTextElement
 } as ComponentMeta<typeof HoverTextElement>;
 
 export const Template: ComponentStory<typeof HoverTextElement> = args => {

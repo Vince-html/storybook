@@ -4,7 +4,7 @@ import { FaTrash } from 'react-icons/fa';
 import { MenuItemCustom } from '.';
 
 export default {
-  title: 'Example/MenuItemCustom',
+  title: 'UI Portal/MenuItemCustom/MenuItemCustom',
   component: MenuItemCustom
 } as ComponentMeta<typeof MenuItemCustom>;
 

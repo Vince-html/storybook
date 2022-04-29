@@ -5,7 +5,7 @@ import { ChangeEvent, FormEvent, useState } from 'react';
 import { SearchBar } from '.';
 
 export default {
-  title: 'Example/SearchBar',
+  title: 'UI Portal/SearchBar/SearchBar',
   component: SearchBar,
   parameters: {
     componentSubtitle: 'SearchBar'
