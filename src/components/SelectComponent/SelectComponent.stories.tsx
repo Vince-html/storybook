@@ -19,10 +19,6 @@ export default {
     }
   }
 } as ComponentMeta<typeof SelectComponent>;
-export const data = [
-  { id: 1, fabricante: 'intel' },
-  { id: 2, fabricante: 'amd' }
-];
 
 export const Template: ComponentStory<typeof SelectComponent> = args => {
   const [localValue, setValue] = useState({
@@ -33,6 +29,10 @@ export const Template: ComponentStory<typeof SelectComponent> = args => {
     const { value, name } = e.target;
     setValue({ ...localValue, [name]: value });
   };
+  const data = [
+    { id: 1, fabricante: 'intel' },
+    { id: 2, fabricante: 'amd' }
+  ];
   return (
     <div>
       <SelectComponent

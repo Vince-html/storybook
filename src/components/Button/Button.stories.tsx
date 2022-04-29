@@ -16,8 +16,6 @@ export default {
 export const ButtonTemplate: ComponentStory<typeof Button> = args => {
   const [loading, setLoading] = useState(false);
 
-  const style = { '.loading-spinner': { borderColor: 'red' } };
-
   setTimeout(() => {
     setLoading(true);
   }, 2000);
@@ -43,9 +41,7 @@ export const ButtonTemplate: ComponentStory<typeof Button> = args => {
           backgroundColor: 'yellow',
           color: 'black',
           border: 'none',
-          display: 'flex',
-          justifyContent: 'space-between',
-          ...style
+          display: 'flex'
         }}
       />
     </div>

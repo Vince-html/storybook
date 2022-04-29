@@ -24,10 +24,10 @@ const DefaultLayout = (
     large: '1.45rem'
   };
   const paddingCustom = {
-    runt: '0.3rem 1.5rem',
-    small: '0.5rem 2rem',
-    medium: '0.7rem 2.5rem',
-    large: '0.9rem 3rem'
+    runt: '0.5rem 1.5rem',
+    small: '0.7rem 2rem',
+    medium: '0.8rem 2.5rem',
+    large: '1rem 3rem'
   };
   return {
     padding: paddingCustom[size],
